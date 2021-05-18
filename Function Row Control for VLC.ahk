@@ -41,7 +41,6 @@
 		Sleep 5
 		Send ^{Left}
 		WinActivate ahk_class #32770
-		MouseMove, 150,75
 		return
 
 	; 2.2 position back by 10 seconds
@@ -51,7 +50,6 @@
 		Sleep 5
 		Send {Left}
 		WinActivate ahk_class #32770
-		MouseMove, 150,75
 		return
 
 	; 2.3 position forward by 10 seconds
@@ -61,7 +59,6 @@
 		Sleep 5
 		Send {Right}
 		WinActivate ahk_class #32770
-		MouseMove, 150,75
 		return
 
 	; 2.4 position forward by 1 minute	
@@ -71,7 +68,6 @@
 		Sleep 5
 		Send ^{Right}
 		WinActivate ahk_class #32770
-		MouseMove, 150,75
 		return
 
 ; 3 play pause
@@ -82,12 +78,11 @@
 		Sleep 5
 		Send {Space}
 		WinActivate ahk_class #32770
-		MouseMove, 150,75
 		return
 
 ; 4 full screen
 
-	F11:: ; -
+	F10:: ; -
 	
 		WinActivate ahk_exe vlc.exe
 		Sleep 5
@@ -97,10 +92,18 @@
 ; 5 wow
 
 
-	F12:: 
+	F11:: 
 	
 		WinActivate ahk_exe obs64.exe
 		Send {F7}
 		return
 
-return
+; 6 greenshot capture last region and paste
+
+	F12:: 
+		WinActivate ahk_exe ONENOTE.EXE
+		Send ^+g
+		Sleep 250
+		Send ^v
+		WinActivate ahk_class #32770
+		return
