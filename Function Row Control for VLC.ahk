@@ -40,7 +40,9 @@
 		WinActivate ahk_exe vlc.exe
 		Sleep 5
 		Send ^{Left}
-		WinActivate ahk_class #32770
+		WinActivate ahk_exe notepad++.exe
+		Send ^f
+		 
 		return
 
 	; 2.2 position back by 10 seconds
@@ -49,7 +51,9 @@
 		WinActivate ahk_exe vlc.exe
 		Sleep 5
 		Send {Left}
-		WinActivate ahk_class #32770
+		WinActivate ahk_exe notepad++.exe
+		Send ^f
+		 
 		return
 
 	; 2.3 position forward by 10 seconds
@@ -58,7 +62,9 @@
 		WinActivate ahk_exe vlc.exe
 		Sleep 5
 		Send {Right}
-		WinActivate ahk_class #32770
+		WinActivate ahk_exe notepad++.exe
+		Send ^f
+		 
 		return
 
 	; 2.4 position forward by 1 minute	
@@ -67,7 +73,9 @@
 		WinActivate ahk_exe vlc.exe
 		Sleep 5
 		Send ^{Right}
-		WinActivate ahk_class #32770
+		WinActivate ahk_exe notepad++.exe
+		Send ^f
+	
 		return
 
 ; 3 play pause
@@ -95,7 +103,7 @@
 	F11:: 
 	
 		WinActivate ahk_exe obs64.exe
-		Send {F7}
+		Send ^+q
 		return
 
 ; 6 greenshot capture last region and paste
